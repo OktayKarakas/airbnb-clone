@@ -11,6 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import LargeCard from "@/components/LargeCard";
+import Footer from "@/components/Footer";
 
 export default function Home({ exploreData, cardsData }) {
   const [exploreLoading, setExploreLoading] = useState(true);
@@ -62,11 +63,11 @@ export default function Home({ exploreData, cardsData }) {
           <h2 className="text-4xl font-semibold py-8 h-4/6">Live Anywhere</h2>
           <div className="p-3 -ml-3">
             <Swiper
-              spaceBetween={50}
-              slidesPerView={1}
+              spaceBetween={51}
+              slidesPerView={1.2}
               breakpoints={{
                 640: {
-                  slidesPerView: 2,
+                  slidesPerView: 2.2,
                 },
                 1200: {
                   slidesPerView: 3.5,
@@ -98,6 +99,7 @@ export default function Home({ exploreData, cardsData }) {
           buttonText="Get Inspired"
         />
       </main>
+      <Footer />
     </>
   );
 }
