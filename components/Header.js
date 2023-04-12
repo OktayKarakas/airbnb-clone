@@ -91,7 +91,8 @@ const Header = ({ placeholder }) => {
             </button>
             <button
               className="flex-grow text-red-400"
-              onClick={() =>
+              onClick={() => {
+                resetInput();
                 router.push({
                   pathname: "/search",
                   query: {
@@ -100,8 +101,8 @@ const Header = ({ placeholder }) => {
                     endDate: endDate.toISOString(),
                     noOfGuests,
                   },
-                })
-              }
+                });
+              }}
             >
               Search
             </button>
